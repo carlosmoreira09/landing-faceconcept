@@ -9,7 +9,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
   },
 }
 
@@ -51,7 +51,7 @@ export function CTASection() {
         id="cta-heading"
         className="font-display text-[clamp(2.2rem,8vw,3.4rem)] font-light italic text-[var(--marrom-escuro)] leading-tight text-balance max-w-[380px]"
       >
-        Agende sua avaliação gratuita
+        Agende sua avaliação
       </motion.h2>
 
       <motion.p

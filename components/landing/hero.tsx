@@ -244,7 +244,7 @@ export function Hero() {
               whileTap={{ scale: 0.96 }}
               transition={{ type: "spring", stiffness: 380 }}
             >
-              Agendar avaliação gratuita
+              Agendar avaliação
             </motion.a>
             <motion.a
               href="#procedimentos"
