@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: hadena-news-production
+  group: clinicfaceconcept-production
   cancel-in-progress: true
 
 jobs:
