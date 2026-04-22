@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup SSH
         run: |
@@ -42,10 +42,10 @@ jobs:
             git reset --hard origin/main
 
             echo ">>> Installing dependencies..."
-            npm ci
+            pnpm install --frozen-lockfile
 
             echo ">>> Building application..."
-            NODE_OPTIONS='--max-old-space-size=4096' npm run build
+            NODE_OPTIONS='--max-old-space-size=4096' pnpm run build
 
             echo ">>> Restarting PM2 app ($APP_NAME)..."
             if pm2 describe "$APP_NAME" >/dev/null 2>&1; then
